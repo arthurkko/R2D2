@@ -1,7 +1,7 @@
 import wave 
 import numpy as np
 
-with wave.open("/Users/arthurkunko/Desktop/Monitoria-Projetos---MIA-main/file.wav") as w:
+with wave.open("/Users/arthurkunko/Desktop/R2D2/text2.wav") as w:
     framerate = w.getframerate()
     frames = w.getnframes()
     channels = w.getnchannels()
