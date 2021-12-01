@@ -1,0 +1,23 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["olá", "como vai", "tem alguém aí", "oi", "bom dia", "boa noite", "boa tarde", "tudo bem", "tudo bom", "tudo bem com você", "tudo bom com você"],
+         "responses": ["Olá!", "Bom te ver por aqui!", "Oi, como eu posso te ajudar?"]
+        },
+        {"tag": "goodbye",
+         "patterns": ["tchau", "tchau mia", "te vejo mais tarde", "nos vemos mais tarde", "até logo", "até logo mia", "até mais", "até mais mia", "estou indo", "tenha um bom dia", "tenha uma boa noite", "adeus"],
+         "responses": ["Triste te ver partir, volte sempre!", "Nos vemos mais tarde!", "Até logo!"]
+        },
+        {"tag": "thanks",
+        "patterns": ["obrigado", "obrigada", "muito obrigado", "muito obrigada", "obrigado mia", "obrigada mia", "muito obrigado mia", "muito obrigada mia"],
+        "responses": ["O prazer é todo meu!"]
+        },
+        {"tag": "name",
+         "patterns": ["qual o seu nome", "qual é o seu nome", "como eu posso te chamar", "como você se chama", "como se chama", "quem é você"],
+         "responses": ["Olá! Eu sou a Inteligência Artificail da Mauá. Mas você pode me chamar de MIA!", "Oi, eu sou a MIA!"]
+        },
+        {"tag": "location",
+        "patterns": ["onde estamos", "onde nós estamos", "onde você está agora", "onde você trabalha", "onde você mora", "onde você vive"],
+        "responses": ["Estamos no laboratório de Controle e Auotmação do bloco W"]
+        }
+   ]
+}
