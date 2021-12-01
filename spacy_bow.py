@@ -73,28 +73,22 @@ def chat(text, response):
     # Use textcat to get the scores for each doc
     textcat = nlp.get_pipe('textcat')
     scores = textcat.predict(docs)
-    print(scores)
+    # print(scores)
 
     # From the scores, find the label with the highest score/probability
     predicted_label = scores.argmax(axis=1)
-    print(predicted_label)
+    # print(predicted_label)
     predict = textcat.labels[predicted_label[0]]
-    print(predict)
+    # print(predict)
 
     if scores[0][predicted_label[0]] >= 0.9:
         for list in data["intents"]:
             if list['tag'] == predict:
                 r = list['responses']
                 response['result'] = random.choice(r)
-                print(response["result"])
                 flag = 1
                 return flag, response
     else:
         flag = 0
         return flag, response
     
-
-response = {}
-while True:
-    text = input("quesion: ")
-    chat(text, response)

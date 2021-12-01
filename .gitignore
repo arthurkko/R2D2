@@ -1,7 +1,7 @@
-.DS_Store
-.vscode
+.DS_Store/
+.vscode/
 .env
 *bfg*
 *test*
 *.wav
-mia_model
+mia_model/

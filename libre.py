@@ -10,4 +10,6 @@ def translate(texto, origin="en", to="pt"):
     # print(lt.languages())
 
     # tradução
-    print(lt.translate(texto, origin, to))
+    translation = lt.translate(texto, origin, to)
+    return translation
+    

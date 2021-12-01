@@ -64,7 +64,7 @@ def respond(tries=False, question='', response=None):
         response = json.loads(requests.get(url, params=params).text)
     
     if "error" in response:
-        response['result'] = "Eu não entendi consegui te entender!"
+        response['result'] = "Eu não consegui te entender!"
         tries = False
 
 

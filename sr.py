@@ -1,17 +1,19 @@
 import speech_recognition as sr
 
-r = sr.Recognizer()
+def listen():
+    r = sr.Recognizer()
 
-try:
-    with sr.Microphone() as source:
-        print("recording")
-        r.adjust_for_ambient_noise(source)
-        audio = r.listen(source)
+    try:
+        with sr.Microphone() as source:
+            print("Estou ouvindo!")
+            r.adjust_for_ambient_noise(source)
+            audio = r.listen(source)
 
-    print(
-        f"phrase: "
-        f"{r.recognize_google(audio, language='pt-br')}\n\n")
-    
+        phrase = str(r.recognize_google(audio, language='pt-br'))
+        print(phrase)
+        
+        return phrase
 
-except Exception as e:
-    print("Exception: " + str(e))
+    except Exception as e:
+        print("Exception: " + str(e))
+

@@ -21,15 +21,16 @@ voices = text_to_speech.list_voices().get_result()
 #         print(json.dumps(voice, indent=2))
 #         print("\n")
 
-texto = " análise econômica vem para complementar todo conhecimento em avaliação de ações do assinante Suno. Como dizem que um otimista é um pessimista sem dados, queremos dar toda informação econômica ao assinante da Suno para tomar decisões de investimentos melhores."
 
-with open('text.wav', 'wb') as audio_file:     # criar arquivo .wav do text
-    try:
-        audio_file.write(
-            text_to_speech.synthesize(
-                text=texto,
-                voice="pt-BR_IsabelaV3Voice",
-                accept='audio/wav'        
-            ).get_result().content)
-    except Exception as e:
-        print("Exception: " + str(e))
+
+def speak(texto):
+    with open('speach.wav', 'wb') as audio_file:     # criar arquivo .wav do text
+        try:
+            audio_file.write(
+                text_to_speech.synthesize(
+                    text=texto,
+                    voice="pt-BR_IsabelaV3Voice",
+                    accept='audio/wav'        
+                ).get_result().content)
+        except Exception as e:
+            print("Exception: " + str(e))
